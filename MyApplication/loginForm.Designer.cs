@@ -119,7 +119,7 @@ namespace MyApplication
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(457, 128);
+            this.ClientSize = new System.Drawing.Size(457, 129);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.resetButton);
@@ -131,7 +131,7 @@ namespace MyApplication
             this.MaximumSize = new System.Drawing.Size(473, 167);
             this.MinimumSize = new System.Drawing.Size(473, 167);
             this.Name = "LoginForm";
-            //this.Load += new System.EventHandler(this.StartupForm_Load);
+            this.Load += new System.EventHandler(this.LoginForm_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

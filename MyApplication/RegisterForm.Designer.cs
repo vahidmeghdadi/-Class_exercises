@@ -31,9 +31,9 @@
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.passwordLabel = new System.Windows.Forms.Label();
             this.fullnameLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.usernameTextBox1 = new System.Windows.Forms.TextBox();
+            this.passwordTextBox1 = new System.Windows.Forms.TextBox();
+            this.fullnameTextBox1 = new System.Windows.Forms.TextBox();
             this.registerButton = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
             this.loginButton = new System.Windows.Forms.Button();
@@ -73,33 +73,33 @@
             this.fullnameLabel.TabIndex = 4;
             this.fullnameLabel.Text = "&Fullname";
             // 
-            // textBox1
+            // usernameTextBox1
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.usernameTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(109, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(318, 20);
-            this.textBox1.TabIndex = 1;
+            this.usernameTextBox1.Location = new System.Drawing.Point(109, 12);
+            this.usernameTextBox1.Name = "usernameTextBox1";
+            this.usernameTextBox1.Size = new System.Drawing.Size(318, 20);
+            this.usernameTextBox1.TabIndex = 1;
             // 
-            // textBox2
+            // passwordTextBox1
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.passwordTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(109, 38);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(318, 20);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.passwordTextBox1.Location = new System.Drawing.Point(109, 38);
+            this.passwordTextBox1.Name = "passwordTextBox1";
+            this.passwordTextBox1.Size = new System.Drawing.Size(318, 20);
+            this.passwordTextBox1.TabIndex = 3;
+            this.passwordTextBox1.UseSystemPasswordChar = true;
             // 
-            // textBox3
+            // fullnameTextBox1
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.fullnameTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(109, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(318, 20);
-            this.textBox3.TabIndex = 5;
+            this.fullnameTextBox1.Location = new System.Drawing.Point(109, 64);
+            this.fullnameTextBox1.Name = "fullnameTextBox1";
+            this.fullnameTextBox1.Size = new System.Drawing.Size(318, 20);
+            this.fullnameTextBox1.TabIndex = 5;
             // 
             // registerButton
             // 
@@ -109,7 +109,7 @@
             this.registerButton.TabIndex = 6;
             this.registerButton.Text = "Re&gister";
             this.registerButton.UseVisualStyleBackColor = true;
-            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
+            this.registerButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
             // resetButton
             // 
@@ -119,7 +119,6 @@
             this.resetButton.TabIndex = 7;
             this.resetButton.Text = "&Reset";
             this.resetButton.UseVisualStyleBackColor = true;
-            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // loginButton
             // 
@@ -129,7 +128,6 @@
             this.loginButton.TabIndex = 8;
             this.loginButton.Text = "&Login";
             this.loginButton.UseVisualStyleBackColor = true;
-            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // exitButton
             // 
@@ -139,7 +137,6 @@
             this.exitButton.TabIndex = 9;
             this.exitButton.Text = "E&xit";
             this.exitButton.UseVisualStyleBackColor = true;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // RegisterForm
             // 
@@ -152,9 +149,9 @@
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.registerButton);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.fullnameTextBox1);
+            this.Controls.Add(this.passwordTextBox1);
+            this.Controls.Add(this.usernameTextBox1);
             this.Controls.Add(this.fullnameLabel);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.UsernameLabel);
@@ -172,9 +169,9 @@
         private System.Windows.Forms.Label UsernameLabel;
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.Label fullnameLabel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox usernameTextBox1;
+        private System.Windows.Forms.TextBox passwordTextBox1;
+        private System.Windows.Forms.TextBox fullnameTextBox1;
         private System.Windows.Forms.Button registerButton;
         private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.Button loginButton;

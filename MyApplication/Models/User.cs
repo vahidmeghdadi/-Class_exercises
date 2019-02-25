@@ -54,5 +54,46 @@ namespace Models
         //    throw new NotImplementedException();
         //}
         // **********
+        public string DisplayName
+        {
+            get
+            {
+                string result = string.Empty;
+
+                //if (string .IsNullOrWhiteSpace(FullName)==null)
+                //{
+                //    result = FullName;
+                //}
+
+                if (result != string .Empty)
+                {
+                    result += " - ";
+                }
+
+                result += $"[{ Username}]";
+
+                if (IsActive)
+                {
+                    result += "[Enable]";
+                }
+
+                else
+                {
+                    result += "[Disable]";
+                }
+
+                if (IsAdmin)
+                {
+                    result += "[Admin]";
+                }
+
+                else
+                {
+                    result += "[User]";
+                }
+
+                return result;
+            }
+        }
     }
 }

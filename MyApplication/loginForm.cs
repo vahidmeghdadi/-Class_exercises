@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 namespace MyApplication
 {
@@ -67,6 +68,16 @@ namespace MyApplication
 
                 System.Windows.Forms.MessageBox.Show("Welcom!");
 
+                Infrastructure.Utility.AuthenticatedUser = foundUser;
+
+                Hide();
+
+                MainForm mainForm = new MainForm();
+
+                mainForm.InitializeMainForm();
+
+                mainForm.Show();
+
 
             }
             catch (System.Exception ex)
@@ -84,20 +95,39 @@ namespace MyApplication
 
         }
 
+		internal void ResetForm()
+		{
+			throw new NotImplementedException();
+		}
 
-        private void ResetButton_Click(object sender, System.EventArgs e)
+		private void ResetButton_Click(object sender, System.EventArgs e)
         {
-            System.Windows.Forms.MessageBox.Show("Reset");
+            ResetForm();
+        }
+
+        public void resetForm()
+        {
+            passwordTextBox.Text = string.Empty;
+            usernameTextBox.Text = string.Empty;
+
+            usernameTextBox.Focus();
         }
 
         private void RegisterButton_Click(object sender, System.EventArgs e)
         {
             System.Windows.Forms.MessageBox.Show("Register");
+
+			Infrastructure.Utility.RegisterForm.Show();
         }
 
         private void ExitButton_Click(object sender, System.EventArgs e)
         {
             System.Windows.Forms.MessageBox.Show("Exit");
+        }
+
+        private void LoginForm_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -86,24 +86,29 @@ namespace MyApplication
             // **************************************************
 
             // **************************************************
-            System.Windows.Forms.Application.Run(new LoginForm());
+            //         System.Windows.Forms.Application.Run(new LoginForm());
 
-            #region Runing Startup Form and then Disposing!
-            LoginForm startupForm = new LoginForm();
+            //         #region Runing Startup Form and then Disposing!
+            //         LoginForm startupForm = new LoginForm();
 
-			System.Windows.Forms.Application.Run(startupForm);
+            //System.Windows.Forms.Application.Run(startupForm);
 
-			if (startupForm != null)
-			{
-				if (startupForm.IsDisposed == false)
-				{
-					startupForm.Dispose();
-				}
+            //if (startupForm != null)
+            //{
+            //	if (startupForm.IsDisposed == false)
+            //	{
+            //		startupForm.Dispose();
+            //	}
 
-				startupForm = null;
-			}
-			#endregion /Runing Startup Form and then Disposing!
-			// **************************************************
-		}
-	}
+            //	startupForm = null;
+            //}
+            //#endregion /Runing Startup Form and then Disposing!
+            // **************************************************
+            #region Solotion(2)
+            System.Windows.Forms.Application.Run(Infrastructure.Utility.LoginForm);
+            System.Windows.Forms.Application.Run(Infrastructure.Utility.RegisterForm);
+            #endregion Solotion(2)
+
+        }
+    }
 }
