@@ -46,7 +46,7 @@
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "&Old Password";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // label2
             // 
@@ -57,7 +57,7 @@
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "&New Password";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // label3
             // 
@@ -68,7 +68,7 @@
             this.label3.Size = new System.Drawing.Size(116, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "&Confirm New Password";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // textBox1
             // 

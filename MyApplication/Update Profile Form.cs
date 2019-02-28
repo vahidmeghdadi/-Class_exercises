@@ -10,105 +10,105 @@ using System.Windows.Forms;
 
 namespace MyApplication
 {
-    public partial class Update_Profile_Form : Form
-    {
-        public Update_Profile_Form()
-        {
-            InitializeComponent();
-        }
+	public partial class Update_Profile_Form : Form
+	{
+		public Update_Profile_Form()
+		{
+			InitializeComponent();
+		}
 
-        private void Update_Profile_Form_Load(object sender, EventArgs e)
-        {
-            Models.DatabaseContext databaseContext = null;
+		private void Update_Profile_Form_Load(object sender, EventArgs e)
+		{
+			Models.DatabaseContext databaseContext = null;
 
-            try
-            {
-                databaseContext =
-                    new Models.DatabaseContext();
+			try
+			{
+				databaseContext =
+					new Models.DatabaseContext();
 
-                Models.User currentUsers =
-                    databaseContext.Users
-                    .Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
-                    .FirstOrDefault();
+				Models.User currentUsers =
+					databaseContext.Users
+					.Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
+					.FirstOrDefault();
 
-                if (currentUsers == null)
-                {
-                    System.Windows.Forms.Application.Exit();
-                }
+				if (currentUsers == null)
+				{
+					System.Windows.Forms.Application.Exit();
+				}
 
-                fullnametextBox.Text = currentUsers.FullName;
-                descriptionTextBox.Text = currentUsers.Description;
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show("Error" + ex.Message);
-            }
+				fullnametextBox.Text = currentUsers.FullName;
+				descriptionTextBox.Text = currentUsers.Description;
+			}
+			catch (System.Exception ex)
+			{
+				System.Windows.Forms.MessageBox.Show("Error" + ex.Message);
+			}
 
-            finally
-            {
-                if (databaseContext != null)
-                {
-                    databaseContext.Dispose();
-                    databaseContext = null;
-                }
-            }
+			finally
+			{
+				if (databaseContext != null)
+				{
+					databaseContext.Dispose();
+					databaseContext = null;
+				}
+			}
 
 
-        }
+		}
 
-        private void saveButton_Click(object sender, EventArgs e)
-        {
-            Models.DatabaseContext databaseContext = null;
+		private void saveButton_Click(object sender, EventArgs e)
+		{
+			Models.DatabaseContext databaseContext = null;
 
-            try
-            {
-                databaseContext =
-                    new Models.DatabaseContext();
+			try
+			{
+				databaseContext =
+					new Models.DatabaseContext();
 
-                Models.User currentUser =
-                    databaseContext.Users
-                    .Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
-                    .FirstOrDefault();
+				Models.User currentUser =
+					databaseContext.Users
+					.Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
+					.FirstOrDefault();
 
-                if (currentUser == null)
-                {
-                    System.Windows.Forms.Application.Exit();
-                }
+				if (currentUser == null)
+				{
+					System.Windows.Forms.Application.Exit();
+				}
 
-                currentUser.FullName = fullnametextBox.Text;
-                currentUser.Description = descriptionTextBox.Text;
+				currentUser.FullName = fullnametextBox.Text;
+				currentUser.Description = descriptionTextBox.Text;
 
-                databaseContext.SaveChanges();
+				databaseContext.SaveChanges();
 
-                Infrastructure.Utility.AuthenticatedUser = currentUser;
+				Infrastructure.Utility.AuthenticatedUser = currentUser;
 
-                //MainForm mainForm = this.MdiParent as MdiForm;
+				//MainForm mainForm = this.MdiParent as MdiForm;
 
-                //if (mainForm != null)
-                //{
-                //    mainForm.InitializeMainForm();
-                //}
+				//if (mainForm != null)
+				//{
+				//    mainForm.InitializeMainForm();
+				//}
 
-                Infrastructure.Utility.MainForm.InitializeMainForm();
+				Infrastructure.Utility.MainForm.InitializeMainForm();
 
-                System.Windows.Forms.MessageBox
-                    .Show(" your profile was update successfully...");
+				System.Windows.Forms.MessageBox
+					.Show(" your profile was update successfully...");
 
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show("Error:" + ex.Message);
-            }
+			}
+			catch (System.Exception ex)
+			{
+				System.Windows.Forms.MessageBox.Show("Error:" + ex.Message);
+			}
 
-            finally
-            {
-                if (databaseContext != null)
-                {
-                    databaseContext.Dispose();
-                    databaseContext = null;
-                }
-            }
+			finally
+			{
+				if (databaseContext != null)
+				{
+					databaseContext.Dispose();
+					databaseContext = null;
+				}
+			}
 
-        }
-    }
+		}
+	}
 }

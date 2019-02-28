@@ -10,26 +10,26 @@ using System.Windows.Forms;
 
 namespace MyApplication
 {
-    public partial class ChangePasswordForm : Form
-    {
-        public ChangePasswordForm()
-        {
-            InitializeComponent();
-        }
+	public partial class ChangePasswordForm : Form
+	{
+		public ChangePasswordForm()
+		{
+			InitializeComponent();
+		}
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+		private void Label1_Click(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void label2_Click(object sender, EventArgs e)
-        {
+		private void Label2_Click(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void label3_Click(object sender, EventArgs e)
-        {
+		private void Label3_Click(object sender, EventArgs e)
+		{
 
-        }
-    }
+		}
+	}
 }

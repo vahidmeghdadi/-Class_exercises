@@ -35,10 +35,10 @@ namespace MyApplication
 
 		private void RegisterButton_Click(object sender, System.EventArgs e)
 		{
-            
 
-            if ((string.IsNullOrWhiteSpace(usernameTextBox1.Text)) ||
-                (string.IsNullOrWhiteSpace(usernameTextBox1.Text)))
+
+			if ((string.IsNullOrWhiteSpace(usernameTextBox1.Text)) ||
+				(string.IsNullOrWhiteSpace(usernameTextBox1.Text)))
 			{
 
 				usernameTextBox1.Text =
@@ -65,7 +65,7 @@ namespace MyApplication
 			try
 			{
 				DatabaseContext =
-                    new Models.DatabaseContext();
+					new Models.DatabaseContext();
 
 				Models.User user =
 					DatabaseContext.Users
@@ -118,24 +118,24 @@ namespace MyApplication
 			}
 		}
 
-        //internal void ResetForm()
-        //{
-        //    throw new NotImplementedException();
-        //}
+		//internal void ResetForm()
+		//{
+		//    throw new NotImplementedException();
+		//}
 
-        private void ResetButton_Click(object sender, System.EventArgs e)
-        {
-            resetForm();
-        }
+		private void ResetButton_Click(object sender, System.EventArgs e)
+		{
+			resetForm();
+		}
 
-        private void resetForm()
-        {
-            usernameTextBox1.Text = string.Empty;
-            passwordTextBox1.Text = string.Empty;
-            fullnameTextBox1.Text = string.Empty;
+		private void resetForm()
+		{
+			usernameTextBox1.Text = string.Empty;
+			passwordTextBox1.Text = string.Empty;
+			fullnameTextBox1.Text = string.Empty;
 
-            usernameTextBox1.Focus();
-        }
+			usernameTextBox1.Focus();
+		}
 	}
 
 

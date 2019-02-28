@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace MyApplication
 {
-    public partial class UserListForm : Form
-    {
-        public UserListForm()
-        {
-            InitializeComponent();
-        }
-    }
+	public partial class UserListForm : Form
+	{
+		public UserListForm()
+		{
+			InitializeComponent();
+		}
+	}
 }
